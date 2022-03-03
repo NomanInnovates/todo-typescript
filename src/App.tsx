@@ -4,6 +4,7 @@ import { Todo } from "./model";
 import TodoList from "./components/TodoList";
 import InputField from "./components/InputField";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
+import Footer from "./components/footer";
 
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
@@ -53,6 +54,7 @@ const App: React.FC = () => {
           completedTodos={completedTodos}
           setCompletedTodos={setCompletedTodos}
         />
+        <Footer />
       </div>
     </DragDropContext>
   );
